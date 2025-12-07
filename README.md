@@ -1,4 +1,6 @@
   # Prediciendo-el-valor-de-mercado-de-jugadores-de-f-tbol-Predicting-football-players-market-value
+#ADECUAR A LOS NUEVOS CAMBIOS
+
 En este proyecto usé las bases de datos disponibles en www.kaggle.com/datasets/davidcariboo/player-scores con datos de Transfermarkt, me propongo entrenar 2 modelos,uno Random Forest y otro XGB, que predigan el valor de mercado de jugadores de futbol de las 5 mayores ligas de Europa(Premier league, Serie A, LaLiga, Bundesliga, Ligue 1) en el periodo 2018-2024 para luego comparar métricas.
   
 Dado que el periodo de tiempo elegido abarca varios años decidí que la variable objetivo sea el valor real del jugador durante la última temporada que jugó en su respectiva liga (los precios los actualizo a partir de los datos de inflación de la zona euro, publicados por el Banco Mundial).
