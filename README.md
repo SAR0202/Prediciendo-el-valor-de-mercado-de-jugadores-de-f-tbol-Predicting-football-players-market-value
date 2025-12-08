@@ -20,19 +20,24 @@ Resumen:
     -Random Forest:
         -Definición del modelo a usar(RF)
         -Búsqueda de hiperparametros con Randomized grid search(100 iteraciones)
-      
-    -Metricas aproximadas del modelo:
+        -Gráfico de importancia de atributos
+    -XGB:
+        -Definición del modelo a usar
+        -Búsqueda de hiperparametros con Randomized search(100 iteraciones)
+        -Gráfico de importancia de atributos
+
+    -Metricas aproximadas de cada modelo:
                |    RF       | XGB
     ------------------------------------
     MAE        | ~ 1.400.000 |
     -------------------------------------
     RMSE       | ~ 4.000.000 |
     --------------------------------------
-    R2         | ~ 0.82      |
+    R2         |    ~ 0.82   |
     --------------------------------------
-    R2_ajustado| ~0.81       |
+    R2_ajustado|    ~0.81    |
     --------------------------------------
-    MAE/MEDIA  | ~32%        |
+    MAE/MEDIA  |     ~32%    |
     --------------------------------------
   Proceso completo:
   
@@ -40,5 +45,10 @@ Resumen:
   
   El modelo predictivo RF que uso es simple, utilizo un randomized grid search con 100 iteraciones para la búsqueda de hiperparametros buscando minimizar el error medio absoluto(MAE) porque es la métrica que uso como referencia en este caso.Uso los hiperpárametros mas comúnes con valores conservadores que buscan evitar el overfitting del modelo. Luego hago el .fit() del modelo, predigo sobre la porción de test e informo MAE,RMSE,R2,R2 ajustado y la relación MAE/MEDIA. 
 
-  
+
   Las librerias que usé fueron Pandas, Numpy y scikit-learn
+
+
+Posibles mejoras:
+
+Se podria usar un modelo de stacking con los dos modelos usados y un modelo LASSO como metamodelo,además, se podria usaar la libreria optuna para la búsqueda de hiperparametros óptimos.
